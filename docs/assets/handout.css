@@ -1,0 +1,49 @@
+:root {
+  /* 正文栏宽、字号、行高、字距 */
+  --reading-width: 740px;
+  --body-size: clamp(16px, 15px + 0.3vw, 18px);
+  --body-leading: 1.85;
+  --body-tracking: 0.015em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fcfcfa;
+  color: #263238;
+  font-family: Inter, "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: var(--body-size);
+  line-height: var(--body-leading);
+  letter-spacing: var(--body-tracking);
+}
+
+.handout {
+  /* 窄屏左右各留 20px，宽屏使用设定的最大栏宽 */
+  width: min(calc(100% - 40px), var(--reading-width));
+  margin-inline: auto;
+  padding-block: 3rem 4rem;
+}
+
+.handout :is(h1, h2, h3) {
+  color: #243d40;
+  font-weight: 650;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.handout h1 { font-size: clamp(28px, 5vw, 38px); }
+.handout h2 { font-size: 1.4em; margin-top: 1.65em; }
+.handout h3 { font-size: 1.15em; margin-top: 1.45em; }
+.handout p  { margin-block: 0.8em; }
+
+/* 只调独立公式。长公式可以横向滚动 */
+.handout mjx-container[display="true"] {
+  margin-block: 0.7em !important;
+  padding-block: 0.15em;
+  font-size: 110% !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
