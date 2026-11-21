@@ -11,4 +11,4 @@ title: 数学学习笔记
 
 ### 曲线积分与曲面积分
 
-- [§1 对弧长的曲线积分](./calculus/line-and-surface-integrals/01-arc-length/)
+- [§1 对弧长的曲线积分](https://raspberry-a.github.io/math-notes/calculus/line-and-surface-integrals/01-arc-length/)
